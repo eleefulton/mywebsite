@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './touchmark.png';
+import logo from './touchmark.svg';
 import './App.css';
 
 class App extends Component {
