@@ -1,19 +1,26 @@
 import React, { Component } from 'react';
-import logo from './touchmark.png';
 import './App.css';
+import About from './About';
+import Projects from './Projects';
+import More from './More';
+import Nav from './Nav';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Hello World! Hek yes</h2>
+      <Router>
+        <div className="App">
+          <Nav />
+          <Switch>
+            <Route path="/" exact component={About} />
+            <Route path="/about" exact component={About} />
+            <Route path="/projects" exact component={Projects} />
+            <Route path="/more" exact component={More} />
+          </Switch>
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      </Router>
     );
   }
 }

@@ -1,24 +1,85 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
 }
+a:link{text-decoration: none;}
 
-.App-logo {
-  /*animation: App-logo-spin infinite 20s linear;*/
-  height: 80px;
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+
+
+.App {
+  font-family: "Montserrat";
 }
 
 .App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
   color: white;
+  display: inline-block;
+  font-size: 64px;
+  padding: 40px;
 }
 
-.App-intro {
+
+.App-body {
   font-size: large;
+  background-color: #333;
+  height: auto;
+  width: inherit;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.Nav-bar {
+  background-color: #555;
 }
+
+.Nav-button {
+  display:inline-block;
+  vertical-align: center;
+  background-color: transparent;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  float: right;
+  font-size: 32px;
+  margin: 40px 2px;
+  opacity: 0.6;
+  transition: 0.3s;
+  cursor: pointer;
+  list-style-type: none;
+  
+}
+
+.Nav-button:hover {opacity: 1}
+
+
+.Projects-button {
+  list-style-type: none;
+  color: black;
+  padding: 32px 32px;
+  font-size: 32px;
+  text-decoration: none;
+  list-style-position:inside;
+  border: 1px solid black;
+  margin: 20px 32px;
+  animation-name: animateIn;
+  animation-duration: 700ms;
+  transition: transform 250ms;
+}
+
+.Projects-button:hover {
+  transform: translateY(-10px);
+}
+
+@keyframes animateIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.6) translateY(-8px);
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+
+
